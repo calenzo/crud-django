@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Transaction
 from .form import TransactionForm
  
+ 
 def listing(request):
     transaction = Transaction.objects.all()
     return render(request, "account/listing.html", { 'transaction' : transaction })
